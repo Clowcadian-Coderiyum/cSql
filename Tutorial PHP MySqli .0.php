@@ -1,27 +1,49 @@
 <?php
-//Class that replace mySqli function based on my needs on intuitive
-//acces and operation around my sql database. Process of developing
-//this class taught me that query worth to initialize functions 
-//before calling for prepare and execute statement.
+/* Class that replace mySqli function based on my needs on intuitive
+acces and operation around my sql database. Process of developing
+this class taught me that query worth to initialize functions 
+before calling for prepare and execute statement.
 
-//--need to incorporate tutorial notes.
-//--need to incorporate log class and stick to it to avoid html.
+--need to incorporate tutorial notes.
+--need to incorporate log class and stick to it to avoid html.
+--need to incorporate importing txt files as lists
+--once first draft finished apply refference documentation */
 class cSql
 {
-	/*[TUTORIAL NOTE]
-	Member variables and constructor were designed intuitively 
+	/*[TUTORIAL NOTE]*/
+	/*Member variables and constructor were designed intuitively 
 	first as I have experience and knowledge when dealing with
 	sql, php and their combination and the requirements that
 	that they poses. But it still took me a flow chart to get 
 	a clear understanding on what, how, where and when to write
-	them in. Now take an advice said by a professor of mine.
-	[ADVICE]FLOW CHART FIRST[ADVICE] */
+	them in. Now take an advice said by a professor of mine.*/
+	/*[ADVICE]FLOW CHART FIRST[ADVICE]*/
+	/*[ADVICE]COMMENT LAST TO EXCEPTABLE DETAIL AS IF [ADVICE]*/
+	/*[ADVICE]YOU ARE A TUTOR, ROOT YOUR SYSTEM IN.   [ADVICE]*/
+	/*[TUTORIAL NOTE]*/
+	/*When I begun on th hard comments I was able to find more
+	bugs in the code such as wrong names, repeated variables, so on a soft not commenting helps you to analyze your code and debug it at the same time.*/
 	
 	/*[MEMBER VARIABLES]
 	Storing some to create an intuitive approach to an sql
 	database. Allows to keep privious values and adjust
 	them or add more on the fly with out having to provide
 	all the mySqli syntaxes being repeated. */
+	var $dbName = "";	//Database name
+	var $tblName = "";	//Table name
+	var $tblHead = "";	//Table Header that is required for 
+						//mySqli prepare and execute functions
+						//ex. "(ID int(1))"
+	var $inRows = "";	//Input rows that is optional
+						//for mySqli select, insert and etc.
+						//functions where the coder can 
+						//specify if he wants to query all("*")
+						//or specified rows.
+	var $inVals = "";	//Input values for speciefied input rows
+	var $argFrmt = "";	//Argument format string for mySqli 
+						//prepare function.
+	var $qry = "";		//Query string for mySqli query, execute
+						// and etc. functions.
 	
 	/*[CONSTRUCTOR]
 	Initiation has optional argument, to help the programmer
