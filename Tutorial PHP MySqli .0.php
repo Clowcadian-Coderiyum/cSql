@@ -17,7 +17,7 @@ class cSql
 	them in. Now take an advice said by a professor of mine.
 	[ADVICE]FLOW CHART FIRST[ADVICE] */
 	
-	/*[FUNC]MEMBER VARS
+	/*[MEMBER VARIABLES]
 	Storing some to create an intuitive approach to an sql
 	database. Allows to keep privious values and adjust
 	them or add more on the fly with out having to provide
