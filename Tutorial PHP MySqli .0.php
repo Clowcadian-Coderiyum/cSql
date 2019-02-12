@@ -23,7 +23,7 @@ class cSql
 	them or add more on the fly with out having to provide
 	all the mySqli syntaxes being repeated. */
 	
-	/*[FUNC]CONSTRUCTOR
+	/*[CONSTRUCTOR]
 	Initiation has optional argument, to help the programmer
 	format his code with multiple statements that fill this
 	sql object rather then a long statement. These arguments 
